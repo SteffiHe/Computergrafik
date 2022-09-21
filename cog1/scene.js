@@ -440,7 +440,7 @@ function(exports, dojo, domStyle, app, scenegraph, createScene, animation, raste
 		var polygonCenter;
 		// Loop over polygons in model.
 		for(var p = 0; p < polygons.length; p++) {
-
+			polycount++;
 			var polygon = polygons[p];
 			var normal = polygonNormals[p];
 
