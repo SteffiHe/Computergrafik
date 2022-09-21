@@ -381,6 +381,7 @@ function(exports, dojo, domStyle, app, scenegraph, createScene, animation, raste
 
 		// Loop over polygons in model.
 		for(var p = 0; p < polygons.length; p++) {
+			// Zählt Anzahl der dargestellten Polygone (Dreiecke oder Vierecke) in der Szene
 			polycount++;
 			// Prepare the data of polygon p to pass to scanline.
 			var polygon = polygons[p];
@@ -440,7 +441,7 @@ function(exports, dojo, domStyle, app, scenegraph, createScene, animation, raste
 		var polygonCenter;
 		// Loop over polygons in model.
 		for(var p = 0; p < polygons.length; p++) {
-			
+
 			var polygon = polygons[p];
 			var normal = polygonNormals[p];
 
