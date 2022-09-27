@@ -1,14 +1,14 @@
 /**
- * 3D Data Store for a model.
- * Missing properties/arrays (commented out)
- * are mixed in from data module.
- *  
+ * Empty object for groups in scenegraph.
+ * 
  * @namespace cog1.data
- * @module cube
+ * @module myModel
  */
-define(["exports", "data"], function(exports, data) {
+ define(["exports", "data"], function(exports, data) {
 	"use strict";
 
+	let index = 0;
+	let instance = {};
 	/**
 	 * Create an instance of the model defined in this module.
 	 * 
@@ -17,122 +17,103 @@ define(["exports", "data"], function(exports, data) {
 	 */
 	exports.create = function(parameter) {
 		
-		if(parameter) {
-			var scale = parameter.scale;
-			var textureURL = parameter.textureURL;
-			// Each face shows a different area of the given texture (e.g, a dice).
-			var sixFacesTexture = parameter.sixFacesTexture;
-		}
-		// Set default values if parameter is undefined.
-		if(scale == undefined){
-			scale = 200;
-		}
-		if(textureURL == undefined){
-			textureURL = "";
-		}
-		if(sixFacesTexture == undefined){
-			sixFacesTexture = false;
-		}
-
 		// Instance of the model to be returned.
-		var instance = {};
-	  // 1st. Quadrant (x,y,z)
-	  const a1 = [1.5, 7.24, 0];
-	  const b1 = [1.5, 8.74, 0];
-	  const c1 = [2.56, 9.8, 0];
-	  const d1 = [4.06, 9.8, 0];
-	  const e1 = [5.12, 8.74, 0];
-	  const f1 = [5.12, 7.24, 0];
-	  const g1 = [4.06, 6.18, 0];
-	  const h1 = [6.18, 4.06, 0];
-	  const i1 = [7.24, 5.12, 0];
-	  const j1 = [8.74, 5.12, 0];
-	  const k1 = [9.8, 4.06, 0];
-	  const l1 = [9.8, 2.56, 0];
-	  const m1 = [8.74, 1.5, 0];
-	  const n1 = [7.24, 1.5, 0];
-	  //Inner wall
-	  const o1 = [0, 5.74, 0];
-	  const p1 = [1.5, 5.74, 0];
-	  const q1 = [3.31, 4.88, 0];
-	  const r1 = [4.88, 3.31, 0];
-	  const s1 = [5.74, 1.5, 0];
-	  //const t1 = [5.74, 0, 0]; <-- Not needed
-	  const u1 = [2.56, 6.18, 0]; //Tower inner 1
-	  const v1 = [6.18, 2.56, 0]; //Tower inner 2
+		
+		var scale = parameter.scale ? parameter.scale : 100;
+		
+		instance.vertices = [];
+		//Säule
+		const sUnten1 = newVertex(-1, -5, 1);
+		const sUnten2 = newVertex(1, -5, 1);
+		const sUnten3 = newVertex(1, -5, -1);
+		const sUnten4 = newVertex(-1, -5, -1);
+		const sUnten5 = newVertex(-1.4, -5, 0);
+		const sUnten6 = newVertex(0, -5, 1.4);
+		const sUnten7 = newVertex(1.4, -5, 0);
+		const sUnten8 = newVertex(0, -5, -1.4);
 
-		// Vertex indices:							
-		//   7----6
-		//	/|   /|
-		// 4----5 |
-		// | 3--|-2
-		// |/   |/
-		// 0----1
-		instance.vertices = [
-			// bottom (y=-1)
-			[-1,-1, 1],
-			[ 1,-1, 1],
-			[ 1,-1,-1],
-			[-1,-1,-1],
-			// top (y=+1)		
-			[-1,1, 1],
-			[ 1,1, 1],
-			[ 1,1,-1],
-			[-1,1,-1],
-		];
-		// Use default colors, implicitly.
-		// instance.colors = data.colors;
+		const sOben1 = newVertex(-1, 5, 1);
+		const sOben2 = newVertex(1, 5, 1);
+		const sOben3 = newVertex(1, 5, -1);
+		const sOben4 = newVertex(-1, 5, -1);
+		const sOben5 = newVertex(-1.4, 5, 0);
+		const sOben6 = newVertex(0, 5, 1.4);
+		const sOben7 = newVertex(1.4, 5, 0);
+		const sOben8 = newVertex(0, 5, -1.4);
 
-		// Corners of the faces have to fit the texture coordinates.			
-		// Faces: bottom/down, top/up, front, right, back, left. 
+		const aOben1 = newVertex(-1.4, 5.8, 1.5);
+		const aOben2 = newVertex(0, 5.8, 2);
+		const aOben3 = newVertex(1.4, 5.8, 1.5);
+		const aOben4 = newVertex(2, 5.8, -0.1);
+		const aOben5 = newVertex(1.4, 5.8, -1.5);
+		const aOben6 = newVertex(0, 5.8, -2);
+		const aOben7 = newVertex(-1.4, 5.8, -1.5);
+		const aOben8 = newVertex(-2, 5.8, 0.1);
+		const aOben9 = newVertex(-1.4, 5.8, 1.5);
+
+		const aOben11 = newVertex(-1.8, 6, 2);
+		const aOben12 = newVertex(0, 6, 2.6);
+		const aOben13 = newVertex(1.8, 6, 2);
+		const aOben14 = newVertex(2.6, 6, -0.1);
+		const aOben15 = newVertex(1.8, 6, -2);
+		const aOben16 = newVertex(0, 6, -2.6);
+		const aOben17 = newVertex(-1.8, 6, -2);
+		const aOben18 = newVertex(-2.6, 6, 0.1);
+		const aOben19 = newVertex(-1.8, 6, 2);
+
 		instance.polygonVertices = [
-			[3,2,1,0],
-			[4,5,6,7],
-			[4,0,1,5],
-			[1,2,6,5],
-			[6,2,3,7],
-			[3,0,4,7]
-		];	
+			[sUnten1, sOben1, sOben6, sUnten6],
+			[sUnten2, sOben2, sOben7, sUnten7],
+			[sUnten3, sOben3, sOben8, sUnten8],
+			[sUnten4, sOben4, sOben5, sUnten5],
+			[sUnten5, sOben5, sOben1, sUnten1],
+			[sUnten6, sOben6, sOben2, sUnten2],
+			[sUnten7, sOben7, sOben3, sUnten3],
+			[sUnten8, sOben8, sOben4, sUnten4],
 
-		instance.polygonColors = [0,1,2,3,4,5];
+			[sOben1, aOben1, aOben2, sOben6],
+			[sOben2, aOben3, aOben2, sOben6],
+			[sOben7, aOben4, aOben3, sOben2],
+			[sOben3, aOben5, aOben4, sOben7],
+			[sOben8, aOben6, aOben5, sOben3],
+			[sOben4, aOben7, aOben6, sOben8],
+			[sOben5, aOben8, aOben7, sOben4],			
+			[sOben1, aOben9, aOben8, sOben5],
 		
-		//instance.vertexNormals = [];
-		//instance.polygonNormals = [];
+			[aOben1, aOben11, aOben12, aOben2],
+			[aOben2, aOben12, aOben13, aOben3],
+			[aOben3, aOben13, aOben14, aOben4],
+			[aOben4, aOben14, aOben15, aOben5],
+			[aOben5, aOben15, aOben16, aOben6],
+			[aOben6, aOben16, aOben17, aOben7],
+			[aOben7, aOben17, aOben18, aOben8],
+			[aOben8, aOben18, aOben19, aOben9]
 
-		if( ! sixFacesTexture){
-	        // Use default texture coordinates.
-			// instance.textureCoord = [];	
-			// For order of corners of faces, see polygonVertices.
-			instance.polygonTextureCoord = [
-				[1,2,3,0],
-				[1,2,3,0],
-				[1,0,3,2],
-				[3,0,1,2],
-				[3,0,1,2],
-				[3,0,1,2]
-			];
-		} else {
-			// BEGIN exercise Cube-Dice-Texture
-			
-			// Order 0 to 16 form bottom-left to top-right
-			// line by line, indices in spatial order:
-			instance.textureCoord = [];
-			// ...
 
-			// Use textureCoord in order given for textureCoord.
-			// The order of corners of faces must fit the one given in polygonVertices.
-			// Match orientation of face given for polygonVertices.
-			// D=bottom/down, U=top/up, F=front, R=right, B=back, L=left
-			// The mapping is explained on the texture image.
-			// instance.polygonTextureCoord = [ ....];
 
-			// END exercise Cube-Dice-Texture			
+		];
+		
+		instance.polygonColors = [];
+		for(var i = 0; i < 44; i++) {
+			instance.polygonColors[i] = 6;
 		}
-		
-		instance.textureURL = textureURL;
+
+		for(var i = 44; i < 118; i++) {
+			instance.polygonColors[i] = 7;
+		}
+
+		for(var i = 118; i < 126; i++) {
+			instance.polygonColors[i] = 9;
+		}
 
 		data.applyScale.call(instance, scale);
-
+		
 		return instance;		
 	};
+
+	function newVertex(x, y, z) {
+		const vertex = {index: index++, coord: [x,y,z]};
+		instance.vertices.push(vertex.coord);
+		return vertex.index;
+	}
 });
