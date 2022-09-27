@@ -13,7 +13,6 @@ define(["exports", "data"], function(exports, data) {
 	 * Create an instance of the model defined in this module.
 	 * 
 	 * @parameter object with fields:
-	 * @parameter scale is the edge length of the cube.
 	 * @returns instance of this model.
 	 */
 	exports.create = function(parameter) {
@@ -37,6 +36,30 @@ define(["exports", "data"], function(exports, data) {
 
 		// Instance of the model to be returned.
 		var instance = {};
+	  // 1st. Quadrant (x,y,z)
+	  const a1 = [1.5, 7.24, 0];
+	  const b1 = [1.5, 8.74, 0];
+	  const c1 = [2.56, 9.8, 0];
+	  const d1 = [4.06, 9.8, 0];
+	  const e1 = [5.12, 8.74, 0];
+	  const f1 = [5.12, 7.24, 0];
+	  const g1 = [4.06, 6.18, 0];
+	  const h1 = [6.18, 4.06, 0];
+	  const i1 = [7.24, 5.12, 0];
+	  const j1 = [8.74, 5.12, 0];
+	  const k1 = [9.8, 4.06, 0];
+	  const l1 = [9.8, 2.56, 0];
+	  const m1 = [8.74, 1.5, 0];
+	  const n1 = [7.24, 1.5, 0];
+	  //Inner wall
+	  const o1 = [0, 5.74, 0];
+	  const p1 = [1.5, 5.74, 0];
+	  const q1 = [3.31, 4.88, 0];
+	  const r1 = [4.88, 3.31, 0];
+	  const s1 = [5.74, 1.5, 0];
+	  //const t1 = [5.74, 0, 0]; <-- Not needed
+	  const u1 = [2.56, 6.18, 0]; //Tower inner 1
+	  const v1 = [6.18, 2.56, 0]; //Tower inner 2
 
 		// Vertex indices:							
 		//   7----6
