@@ -41,6 +41,7 @@
 		const sOben7 = newVertex(1.4, 5, 0);
 		const sOben8 = newVertex(0, 5, -1.4);
 
+		//oberer Bereich
 		const aOben1 = newVertex(-1.4, 5.8, 1.5);
 		const aOben2 = newVertex(0, 5.8, 2);
 		const aOben3 = newVertex(1.4, 5.8, 1.5);
@@ -50,7 +51,7 @@
 		const aOben7 = newVertex(-1.4, 5.8, -1.5);
 		const aOben8 = newVertex(-2, 5.8, 0.1);
 		const aOben9 = newVertex(-1.4, 5.8, 1.5);
-
+		//const aOben10 wird nicht benötigt
 		const aOben11 = newVertex(-1.8, 6, 2);
 		const aOben12 = newVertex(0, 6, 2.6);
 		const aOben13 = newVertex(1.8, 6, 2);
@@ -60,6 +61,20 @@
 		const aOben17 = newVertex(-1.8, 6, -2);
 		const aOben18 = newVertex(-2.6, 6, 0.1);
 		const aOben19 = newVertex(-1.8, 6, 2);
+		//const aOben20 wird nicht benötigt
+		const aOben21 = newVertex(-2.1, 7, 2.3);
+		const aOben22 = newVertex(0, 7, 3);
+		const aOben23 = newVertex(2.1, 7, 2.3);
+		const aOben24 = newVertex(3, 7, -0.1);
+		const aOben25 = newVertex(2.1, 7, -2.3);
+		const aOben26 = newVertex(0, 7, -3);
+		const aOben27 = newVertex(-2.1, 7, -2.3);
+		const aOben28 = newVertex(-3, 7, 0.1);
+		const aOben29 = newVertex(-2.1, 7, 2.3);
+		//const aOben30 wird nicht benötigt
+		const aOben31 = newVertex(-1.8, 8, 2);
+		const aOben32 = newVertex(0, 8, 2.6);
+
 
 		instance.polygonVertices = [
 			[sUnten1, sOben1, sOben6, sUnten6],
@@ -87,9 +102,18 @@
 			[aOben5, aOben15, aOben16, aOben6],
 			[aOben6, aOben16, aOben17, aOben7],
 			[aOben7, aOben17, aOben18, aOben8],
-			[aOben8, aOben18, aOben19, aOben9]
+			[aOben8, aOben18, aOben19, aOben9],
 
+			[aOben11, aOben21, aOben22, aOben12],
+			[aOben12, aOben22, aOben23, aOben13],
+			[aOben13, aOben23, aOben24, aOben14],
+			[aOben14, aOben24, aOben25, aOben15],
+			[aOben15, aOben25, aOben26, aOben16],
+			[aOben16, aOben26, aOben27, aOben17],
+			[aOben17, aOben27, aOben28, aOben18],
+			[aOben18, aOben28, aOben29, aOben19],
 
+			[aOben21, aOben31, aOben32, aOben22],
 
 		];
 		
