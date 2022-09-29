@@ -74,6 +74,7 @@
 		//const aOben30 wird nicht benötigt
 		const aOben31 = newVertex(-1.8, 8, 2);
 		const aOben32 = newVertex(0, 8, 2.6);
+		const aOben33 = newVertex(1.8, 8, 2);
 
 
 		instance.polygonVertices = [
@@ -114,6 +115,7 @@
 			[aOben18, aOben28, aOben29, aOben19],
 
 			[aOben21, aOben31, aOben32, aOben22],
+			[aOben22, aOben32, aOben33, aOben23],
 
 		];
 		
