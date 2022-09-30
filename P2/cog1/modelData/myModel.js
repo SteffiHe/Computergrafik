@@ -75,6 +75,31 @@
 		const aOben31 = newVertex(-1.8, 8, 2);
 		const aOben32 = newVertex(0, 8, 2.6);
 		const aOben33 = newVertex(1.8, 8, 2);
+		const aOben34 = newVertex(2.6, 8, -0.1);
+		const aOben35 = newVertex(1.8, 8, -2);
+		const aOben36 = newVertex(0, 8, -2.6);
+		const aOben37 = newVertex(-1.8, 8, -2);
+		const aOben38 = newVertex(-2.6, 8, 0.1);
+		const aOben39 = newVertex(-1.8, 8, 2);
+		//const aOben40 wird nicht benötigt
+		const aOben41 = newVertex(-1.4, 8.2, 1.5);
+		const aOben42 = newVertex(0, 8.2, 2);
+		const aOben43 = newVertex(1.4, 8.2, 1.5);
+		const aOben44 = newVertex(2, 8.2, -0.1);
+		const aOben45 = newVertex(1.4, 8.2, -1.5);
+		const aOben46 = newVertex(0, 8.2, -2);
+		const aOben47 = newVertex(-1.4, 8.2, -1.5);
+		const aOben48 = newVertex(-2, 8.2, 0.1);
+		const aOben49 = newVertex(-1.4, 8.2, 1.5);
+		//constaOben50 wird nicht benötigt
+		const aOben51 = newVertex(-1, 9, 1);
+		const aOben52 = newVertex(1, 9, 1);
+		const aOben53 = newVertex(1, 9, -1);
+		const aOben54 = newVertex(-1, 9, -1);
+		const aOben55 = newVertex(-1.4, 9, 0);
+		const aOben56 = newVertex(0, 9, 1.4);
+		const aOben57 = newVertex(1.4, 9, 0);
+		const aOben58 = newVertex(0, 9, -1.4);
 
 
 		instance.polygonVertices = [
@@ -116,15 +141,40 @@
 
 			[aOben21, aOben31, aOben32, aOben22],
 			[aOben22, aOben32, aOben33, aOben23],
+			[aOben23, aOben33, aOben34, aOben24],
+			[aOben24, aOben34, aOben35, aOben25],
+			[aOben25, aOben35, aOben36, aOben26],
+			[aOben26, aOben36, aOben37, aOben27],
+			[aOben27, aOben37, aOben38, aOben28],
+			[aOben28, aOben38, aOben39, aOben29],
+
+			[aOben31, aOben41, aOben42, aOben32],
+			[aOben32, aOben42, aOben43, aOben33],
+			[aOben33, aOben43, aOben44, aOben34],
+			[aOben34, aOben44, aOben45, aOben35],
+			[aOben35, aOben45, aOben46, aOben36],
+			[aOben36, aOben46, aOben47, aOben37],
+			[aOben37, aOben47, aOben48, aOben38],
+			[aOben38, aOben48, aOben49, aOben39],
+
+			[aOben41, aOben51, aOben56, aOben42],
+			[aOben42, aOben56, aOben52, aOben43],
+			[aOben43, aOben52, aOben57, aOben44],
+			[aOben44, aOben57, aOben53, aOben45],
+			[aOben45, aOben53, aOben58, aOben46],
+			[aOben46, aOben58, aOben54, aOben47],
+			[aOben47, aOben54, aOben55, aOben48],
+			[aOben48, aOben55, aOben51, aOben49],
+
 
 		];
 		
 		instance.polygonColors = [];
-		for(var i = 0; i < 44; i++) {
+		for(var i = 0; i < 100; i++) {
 			instance.polygonColors[i] = 6;
 		}
 
-		for(var i = 44; i < 118; i++) {
+		for(var i = 100; i < 118; i++) {
 			instance.polygonColors[i] = 7;
 		}
 
