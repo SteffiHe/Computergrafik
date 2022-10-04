@@ -133,6 +133,15 @@
 		const untenR7 = newVertex(2.5, -4, 7.8);
 		const untenR8 = newVertex(3.8, -4, 7.2);
 
+		//rechte Ankerspitze
+		const spitzeR1 = newVertex(1.8, -2.5, 6.7);
+		const spitzeR2 = newVertex(3.5, -2.5, 5.9);
+		const spitzeR3 = newVertex(2.7, -4.5, 8.1);
+		const spitzeR4 = newVertex(3.9, -4.5, 7.6);
+		const spitzeR5 = newVertex(4, -2.7, 7.8);
+		const spitzeR6 = newVertex(2.8, -2.7, 8.3);
+
+
 		//linke Seite
 		const untenL1 = newVertex(-0.7, -4, -5);
 		const untenL2 = newVertex(-3, -4, -4);
@@ -144,6 +153,13 @@
 		const untenL7 = newVertex(-2.5, -4, -7.8);
 		const untenL8 = newVertex(-3.8, -4, -7.2);
 
+		//linke Ankerspitze
+		const spitzeL1 = newVertex(-1.8, -2.5, -6.7);
+		const spitzeL2 = newVertex(-3.5, -2.5, -5.9);
+		const spitzeL3 = newVertex(-2.7, -4.5, -8.1);
+		const spitzeL4 = newVertex(-3.9, -4.5, -7.6);
+		const spitzeL5 = newVertex(-4, -2.7, -7.8);
+		const spitzeL6 = newVertex(-2.8, -2.7, -8.3);
 
 
 		instance.polygonVertices = [
@@ -232,7 +248,7 @@
 			[mitteU7, unten7, unten8, mitteU8],
 			[mitteU8, unten8, unten1, mitteU1],
 
-			//unten rechte Ankerspitze
+			//unten rechte Seite
 			[mitteU1, untenR1, untenR2, mitteU4],
 			[unten1, untenR3, untenR4, unten4],
 			[mitteU1, unten1, untenR3, untenR1],
@@ -243,7 +259,15 @@
 			[untenR1, untenR5, untenR7, untenR3],
 			[untenR2, untenR6, untenR8, untenR4],
 
-			//unten linke Ankerspitze
+			//rechte Ankerspitze
+			[untenR5, spitzeR1, spitzeR2, untenR6],
+			[untenR5, spitzeR3, spitzeR4, untenR6],
+			[spitzeR1, spitzeR2, spitzeR5, spitzeR6],
+			[spitzeR3, spitzeR4, spitzeR5, spitzeR6],
+			[spitzeR1, spitzeR3, spitzeR6],
+			[spitzeR2, spitzeR4, spitzeR5],
+
+			//unten linke Seite
 			[mitteU5, untenL1, untenL2, mitteU8],
 			[unten5, untenL3, untenL4, unten8],
 			[mitteU5, unten5, untenL3, untenL1],
@@ -253,6 +277,14 @@
 			[untenL3, untenL7, untenL8, untenL4],
 			[untenL1, untenL5, untenL7, untenL3],
 			[untenL2, untenL6, untenL8, untenL4],
+
+			//linke Ankerspitze
+			[untenL5, spitzeL1, spitzeL2, untenL6],
+			[untenL5, spitzeL3, spitzeL4, untenL6],
+			[spitzeL1, spitzeL2, spitzeL5, spitzeL6],
+			[spitzeL3, spitzeL4, spitzeL5, spitzeL6],
+			[spitzeL1, spitzeL3, spitzeL6],
+			[spitzeL2, spitzeL4, spitzeL5],
 
 		];
 		
