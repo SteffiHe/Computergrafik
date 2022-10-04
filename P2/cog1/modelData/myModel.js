@@ -41,6 +41,23 @@
 		const mitteO7 = newVertex(-1, 5, -1);
 		const mitteO8 = newVertex(-1.4, 5, 0);
 
+		const mitteR1 = newVertex(0, 4, 1.4);
+		const mitteR2 = newVertex(1.6, 4, 5);
+		const mitteR3 = newVertex(0, 2.5, 1.4);
+		const mitteR4 = newVertex(1.6, 2.5, 5);
+		const mitteR5 = newVertex(1, 4, 1);
+		const mitteR6 = newVertex(2.6, 4, 4.5);
+		const mitteR7 = newVertex(1, 2.5, 1);
+		const mitteR8 = newVertex(2.6, 2.5, 4.5);
+
+		const mitteL1 = newVertex(0, 4, -1.4);
+		const mitteL2 = newVertex(-1.6, 4, -5);
+		const mitteL3 = newVertex(0, 2.5, -1.4);
+		const mitteL4 = newVertex(-1.6, 2.5, -5);
+		const mitteL5 = newVertex(-1, 4, -1);
+		const mitteL6 = newVertex(-2.6, 4, -4.5);
+		const mitteL7 = newVertex(-1, 2.5, -1);
+		const mitteL8 = newVertex(-2.6, 2.5, -4.5);
 
 		//oberer Bereich des Ankers
 		const oben1 = newVertex(-1.4, 5.8, 1.5);
@@ -172,7 +189,18 @@
 			[mitteU6, mitteO6, mitteO7, mitteU7],
 			[mitteU7, mitteO7, mitteO8, mitteU8],
 			[mitteU8, mitteO8, mitteO1, mitteU1],
-	
+
+			[mitteR1, mitteR3, mitteR4, mitteR2],
+			[mitteR5, mitteR7, mitteR8, mitteR6],
+			[mitteR1, mitteR5, mitteR6, mitteR2],
+			[mitteR3, mitteR7, mitteR8, mitteR4],
+			[mitteR2, mitteR6, mitteR8, mitteR4],
+
+			[mitteL1, mitteL3, mitteL4, mitteL2],
+			[mitteL5, mitteL7, mitteL8, mitteL6],
+			[mitteL1, mitteL5, mitteL6, mitteL2],
+			[mitteL3, mitteL7, mitteL8, mitteL4],
+			[mitteL2, mitteL6, mitteL8, mitteL4],
 
 			//Oben
 			[mitteO1, oben1, oben2, mitteO2],
@@ -289,16 +317,8 @@
 		];
 		
 		instance.polygonColors = [];
-		for(var i = 0; i < 100; i++) {
-			instance.polygonColors[i] = 6;
-		}
-
-		for(var i = 100; i < 118; i++) {
-			instance.polygonColors[i] = 7;
-		}
-
-		for(var i = 118; i < 126; i++) {
-			instance.polygonColors[i] = 9;
+		for(var i = 0; i < 150; i++) {
+			instance.polygonColors[i] = 2;  //2 = blau, 6 = schwarz
 		}
 
 		data.applyScale.call(instance, scale);
