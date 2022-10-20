@@ -143,42 +143,44 @@ function(exports, shader, framebuffer, data) {
 		// In any case, do not add an intersection for start point here,
 		// this should happen later in the scanline function.
 
-
 		// Distinction of cases for driving variable.
 		if(dXAbs >= dYAbs){
 			// x is driving variable.
-				dz = (endZ - startZ) / dXAbs;
-				e = dXAbs - dYAbs2;
-				while(x !== endX){
-					x+= dXSign;
-					if(e > 0){
-						e -= dYAbs2;
-					}
-					else {
-						y += dYSign;
-						e += dXdYdiff2;
-					}
-					framebuffer.set(x, y, getZ(x, y), color);
+			dz = (endZ - startZ) / dXAbs;
+			e = dXAbs - dYAbs2;
+			while(x != endX){
+				x = x + dXSign;
+				if(e > 0){
+					e = e - dYAbs2;
 				}
+				else {
+					y = y + dYSign;
+					e = e + dXdYdiff2;
+				}
+				framebuffer.set(x, y, z, color);
+				z = z + dz;
+			}
 						// Do not add intersections for points on horizontal line
 						// and not the end point, which is done in scanline.
 
 					//framebuffer.set(x, y, getZ(x, y), color);
 
 
-		}else {
+		} else {
 			// y is driving variable.
+			dz = (endZ - startZ) / dYAbs;
 			e = dYAbs - dXAbs2;
-			while(y !== endY){
-				y += dYSign;
+			while(y != endY){
+				y = y + dYSign;
 				if(e > 0){
-					e -= dXAbs2;
+					e = e - dXAbs2;
 				}
 				else {
-					x += dXSign;
-					e += dYdXdiff2;
+					x = x + dXSign;
+					e = e + dYdXdiff2;
 				}
-				framebuffer.set(x, y, getZ(x, y), color);
+				framebuffer.set(x, y, z, color);
+				z = z + dz;
 			}
 		}
 
