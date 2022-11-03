@@ -210,7 +210,7 @@ function(exports, shader, framebuffer, data) {
 			// Connect edge to next or to first vertex to close the polygon.
 			var nextVertexIndex = (v < polygon.length - 1) ? v + 1 : 0;
 			var end = vertices[polygon[nextVertexIndex]];
-
+			
 			drawLineBresenhamGivenStartEndPoint(st, end, color);
 		}
 	}

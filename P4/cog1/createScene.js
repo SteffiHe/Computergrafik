@@ -24,7 +24,7 @@ function(exports, scenegraph, animation) {
 		
 		// END exercise myModel
 		
-		return;
+		//return;
 
 		//var cubeNode = scenegraph.createNodeWithModel("cube", "cube", {scale:100, textureURL:"brickWall.jpg"});		
 		var cubeNode1 = scenegraph.createNodeWithModel("cube 1", "cube", {scale:70, textureURL:"stoneWall.jpg"});
@@ -80,14 +80,14 @@ function(exports, scenegraph, animation) {
 		 
 		// Set visibility of nodes (hide: set to false).
 		// Comment out what you want to see as the default is visible.
-        // cubeNode.setVisible(false);
+        cubeNode.setVisible(false);
         cubeNode1.setVisible(false);
         cubeNode2.setVisible(false);
         cubeNode3.setVisible(false);
         cubeNode4.setVisible(false);
         cubeNode5.setVisible(false);
         cubeNode6.setVisible(false);
-        insideOutPolyNode.setVisible(false);
+        insideOutPolyNode.setVisible(true);
         diamondNode.setVisible(false);
         torusNode.setVisible(false);
         torusNode1.setVisible(false);
