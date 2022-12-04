@@ -1,13 +1,13 @@
 /**
-* Rasterization algorithms.
-*
-* The raster module works on the polygon layer.
-*
-* @namespace cog1
-* @module raster
-*/
-define(["exports", "shader", "framebuffer", "data", "glMatrix"], //
-function (exports, shader, framebuffer, data) {
+ * Rasterization algorithms.
+ *
+ * The raster module works on the polygon layer.
+ *
+ * @namespace cog1
+ * @module raster
+ */
+ define(["exports", "shader", "framebuffer", "data", "glMatrix"], //
+ function (exports, shader, framebuffer, data) {
 	"use strict";
 
  	// Drawing context for canvas.
@@ -131,9 +131,9 @@ function (exports, shader, framebuffer, data) {
    		// return;
 
    		// Skip it, if the line is just a point.
-   		if (dX == 0 && dY == 0) {
-	 		return;
-   		}
+		if (startX == endX && startY == endY) {
+			return;
+	  	}
 
    		// Optionally draw start point as is the same
    		// as the end point of the previous edge.
@@ -389,7 +389,6 @@ function (exports, shader, framebuffer, data) {
 
 	 		// Starting value on scanline.
    		}
-
    		// END exercise Texture
  	}
 
@@ -468,10 +467,10 @@ function (exports, shader, framebuffer, data) {
    		for (var y = 0; y < scanlineIntersection.length; y++) {
 	 		var line = scanlineIntersection[y];
 	 		if (!line) continue;
-
 	 		// Do (or skip) some safety check.
 	 		if (line.length < 2 || line.length % 2) {
-	   			console.log("Error in number of intersection (" + line.length + ") in line: " + y);
+	   			//console.log("Error in number of intersection (" + line.length + ") in line: " + y);
+				err = 1;
 	 		}
 
 	 		// Order intersection in scanline.
