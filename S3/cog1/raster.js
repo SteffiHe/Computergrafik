@@ -131,9 +131,9 @@ function (exports, shader, framebuffer, data) {
    		// return;
 
    		// Skip it, if the line is just a point.
-   		if (dX == 0 && dY == 0) {
-	 		return;
-   		}
+		if (startX == endX && startY == endY) {
+			return;
+	  	}
 
    		// Optionally draw start point as is the same
    		// as the end point of the previous edge.

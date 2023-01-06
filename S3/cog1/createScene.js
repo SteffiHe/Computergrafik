@@ -113,48 +113,63 @@ function(exports, scenegraph, animation) {
 
 		var box = scenegraph.createNodeWithModel("box", "cube", { scale: 200 })
 
-			var diamond_1 = scenegraph.createNodeWithModel("diamond_1", "diamond", { resursionDepth: 2, scale: 20 }, box);
-			animation.assign(diamond_1, 'move', {
-				movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
-				sphereRadius: 20,
-				boundingBoxMin: [-200, -200, -200],
-				boundingBoxMax: [200, 200, 200]
-			});
+		var cube_1 = scenegraph.createNodeWithModel("cube_1", "cube", { scale: 20 }, box);
+		animation.assign(cube_1, 'move', {
+			movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
+			sphereRadius: 20,
+			boundingBoxMin: [-200, -200, -200],
+			boundingBoxMax: [200, 200, 200]
+		});
 
-			var sphere_1 = scenegraph.createNodeWithModel("sphere_1", "sphere", { resursionDepth: 2, scale: 20 }, box);
-			animation.assign(sphere_1, 'move', {
-				movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
-				sphereRadius: 20,
-				boundingBoxMin: [-200, -200, -200],
-				boundingBoxMax: [200, 200, 200]
-			});
+		var cube_2 = scenegraph.createNodeWithModel("cube_2", "cube", { scale: 20 }, box);
+		animation.assign(cube_2, 'move', {
+			movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
+			sphereRadius: 20,
+			boundingBoxMin: [-200, -200, -200],
+			boundingBoxMax: [200, 200, 200]
+		});
 
-			var cube_1 = scenegraph.createNodeWithModel("cube_1", "cube", { scale: 20 }, box);
-			animation.assign(cube_1, 'move', {
-				movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
-				sphereRadius: 20,
-				boundingBoxMin: [-200, -200, -200],
-				boundingBoxMax: [200, 200, 200]
-			});
+		var diamond_1 = scenegraph.createNodeWithModel("diamond_1", "diamond", { resursionDepth: 2, scale: 20 }, box);
+		animation.assign(diamond_1, 'move', {
+			movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
+			sphereRadius: 20,
+			boundingBoxMin: [-200, -200, -200],
+			boundingBoxMax: [200, 200, 200]
+		});
 
-			var teapot_1 = scenegraph.createNodeWithModel("teapot_1", "teapot", { scale: 2 }, box);
-			animation.assign(teapot_1, 'move', {
-				movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
-				sphereRadius: 20,
-				boundingBoxMin: [-190, -200, -190],
-				boundingBoxMax: [190, 200, 190]
-			});
+		var sphere_1 = scenegraph.createNodeWithModel("sphere_1", "sphere", { resursionDepth: 2, scale: 20 }, box);
+		animation.assign(sphere_1, 'move', {
+			movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
+			sphereRadius: 20,
+			boundingBoxMin: [-200, -200, -200],
+			boundingBoxMax: [200, 200, 200]
+		});
 
-			var star_1 = scenegraph.createNodeWithModel("star_1", "star", { scale: 2 }, box);
-			animation.assign(star_1, 'move', {
-				movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
-				sphereRadius: 20,
-				boundingBoxMin: [-170, -170, -170],
-				boundingBoxMax: [170, 170, 170]
-			});
+		var sphere_2 = scenegraph.createNodeWithModel("sphere_2", "sphere", { resursionDepth: 2, scale: 20 }, box);
+		animation.assign(sphere_2, 'move', {
+			movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
+			sphereRadius: 20,
+			boundingBoxMin: [-200, -200, -200],
+			boundingBoxMax: [200, 200, 200]
+		});
 
+		var star_1 = scenegraph.createNodeWithModel("star_1", "star", { scale: 2 }, box);
+		animation.assign(star_1, 'move', {
+			movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
+			sphereRadius: 20,
+			boundingBoxMin: [-170, -170, -170],
+			boundingBoxMax: [170, 170, 170]
+		});
 
-		 
+		var teapot_1 = scenegraph.createNodeWithModel("teapot_1", "teapot", { scale: 2 }, box);
+		animation.assign(teapot_1, 'move', {
+			movementSpeed: [Math.random() * 2, Math.random() * 2, Math.random() * 2],
+			sphereRadius: 20,
+			boundingBoxMin: [-190, -200, -190],
+			boundingBoxMax: [190, 200, 190]
+		});
+
+			 
 		// Set visibility of nodes (hide: set to false).
 		// Comment out what you want to see as the default is visible.
 		sun.setVisible(false);
