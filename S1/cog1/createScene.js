@@ -83,7 +83,7 @@ function(exports, scenegraph, animation) {
 		_3.scale([0.7, 1.4, -0.7]);
 		_3.translate([110, 0, 0]);
 		_3.rotate([0, 0, -1.57]);
-        // END exercise Scenegraph		
+        // END exercise Scenegraph 		
         
         // Assign animations.
         // animation.assign(cubeNode, "move");
