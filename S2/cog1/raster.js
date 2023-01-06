@@ -131,7 +131,7 @@ function (exports, shader, framebuffer, data) {
    		// return;
 
    		// Skip it, if the line is just a point.
-		   if (startX == endX && startY == endY) {
+		if (startX == endX && startY == endY) {
 			return;
 	  	}
 
