@@ -109,7 +109,7 @@ function(exports, scenegraph, animation) {
         // Animation of a Planet with an also rotation moon or a ring. 
         // The planet rotates around an small sun.        
         
-        // END exercise Rotating-Planet-Animation
+        // END exercise Rotating-Planet-Animation 
 
 		 
 		// Set visibility of nodes (hide: set to false).
